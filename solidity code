@@ -1,0 +1,30 @@
+ pragma solidity ^0.4.18<=0.6.12;
+ 
+ contract HealthRecords
+ {
+     string PatientName;      //name of the patient examined
+     string Illness;          // Name of the medical condition 
+     string DoctorName;      // Doctor assigned to the patient.
+     string add;               //address of the ptient
+     string bloodgroup;         // blood group of patient
+     string GuardianName;      // Name of guardian of patient
+     int age;             //age of patient
+     int emergencyNO;               // Emergency contact no 
+ 
+ function HealthRecords(string NewPatientName, string newIllness, string NewDoctorName, string Newadd, string Newbloodgroup, string NewGuardianName,int Newage,int NewEmergencyno) public
+ {
+   PatientName=NewPatientName;
+   Illness=newIllness;
+   DoctorName=NewDoctorName;
+   add=Newadd;
+   bloodgroup=Newbloodgroup;
+   GuardianName=NewGuardianName;
+   age=Newage;
+   emergencyNO=NewEmergencyno;
+ }
+  function GetRecordDetails() public view returns( string,string,string,string,string,string,int,int)
+  {
+      return(PatientName,Illness,DoctorName,add,bloodgroup,GuardianName,age,emergencyNO);
+  }
+ 
+ }
