@@ -26,5 +26,8 @@
   {
       return(PatientName,Illness,DoctorName,add,bloodgroup,GuardianName,age,emergencyNO);
   }
- 
+  function makePaymentforPatient()
+  {
+    
+   }
  }
